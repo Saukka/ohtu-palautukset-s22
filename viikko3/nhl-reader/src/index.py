@@ -23,9 +23,17 @@ def main():
 
     print("Players from FIN", datetime.now())
     print("")
+
+    players.sort(key=get_stats, reverse = True)
+
     for player in players:
         if player.nationality == 'FIN':
             print(player)
+
+
+def get_stats(player):
+    return player.goals + player.assists
+
 
 if __name__ == "__main__":
     main()

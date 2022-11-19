@@ -9,4 +9,4 @@ class Player:
         self.games = games
     
     def __str__(self):
-        return str(self.name) + ' team ' + self.team + ' goals ' + str(self.goals) + ' assists ' + str(self.assists)
+        return f"{self.name:22}" + self.team + ' ' + str(self.goals) + ' + ' + str(self.assists) + ' = ' + str(self.goals + self.assists)
