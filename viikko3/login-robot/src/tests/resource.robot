@@ -5,6 +5,9 @@ Library  ../AppLibrary.py
 Input Login Command
     Input  login
 
+Input New Command And Create User
+    Input  new
+
 Input Credentials
     [Arguments]  ${username}  ${password}
     Input  ${username}
