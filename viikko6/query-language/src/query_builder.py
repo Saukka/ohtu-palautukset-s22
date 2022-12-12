@@ -16,5 +16,7 @@ class QueryBuilder():
     def build(self):
         return self.matcher
 
+    def oneOf(self, m1, m2):
+        return QueryBuilder(And(self.matcher, Or(m1, m2)))
 
 
