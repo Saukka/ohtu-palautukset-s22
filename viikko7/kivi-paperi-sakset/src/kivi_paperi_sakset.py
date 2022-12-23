@@ -2,6 +2,7 @@ from tuomari import Tuomari
 from tekoaly_parannettu import TekoalyParannettu
 from tekoaly import Tekoaly
  
+ # Toteutin tehtävän vain yhdellä luokalla ilman kps_... luokkia
 class KiviPaperiSakset:
     def __init__(self, toinen_pelaaja):
         self.toinen_pelaaja = toinen_pelaaja
@@ -9,7 +10,6 @@ class KiviPaperiSakset:
             self.tekoaly = Tekoaly()
         if toinen_pelaaja == 'c':
             self.tekoaly = TekoalyParannettu(10)
-
 
     def pelaa(self):
         tuomari = Tuomari()
@@ -29,8 +29,6 @@ class KiviPaperiSakset:
 
         print("Kiitos!")
         print(tuomari)
-
-
 
     def _ensimmaisen_siirto(self):
         return input("Ensimmäisen pelaajan siirto: ")
